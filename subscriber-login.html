@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subscriber Login | Umbrella Cable Systems</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">UMBRELLA CABLE SYSTEMS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="channels.html">Channels</a></li>
+          <li class="nav-item"><a class="nav-link" href="consumer-corner.html">Consumer Corner</a></li>
+          <li class="nav-item"><a class="nav-link active" href="subscriber-corner.html">Subscriber Corner</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <h2>Subscriber Login</h2>
+    <form>
+      <div class="mb-3">
+        <label for="subscriberId" class="form-label">Subscriber ID</label>
+        <input type="text" class="form-control" id="subscriberId" required>
+      </div>
+      <div class="mb-3">
+        <label for="subscriberPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="subscriberPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Umbrella Cable Systems Pvt. Ltd. All rights reserved.</p>
+      <p>
+        <a href="about.html">About</a> |
+        <a href="channels.html">Channels</a> |
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual form submission
+  
+      const id = document.getElementById('subscriberId').value.trim();
+      const password = document.getElementById('subscriberPassword').value.trim();
+      const message = document.getElementById('loginMessage');
+  
+      // Simple mock credentials
+      const validId = 'user123';
+      const validPass = 'password123';
+  
+      if (id === validId && password === validPass) {
+        message.innerHTML = '<div class="alert alert-success">Login successful! Redirecting...</div>';
+        setTimeout(() => {
+          window.location.href = 'dashboard.html'; // you can create a dashboard.html page later
+        }, 1500);
+      } else {
+        message.innerHTML = '<div class="alert alert-danger">Invalid credentials. Please try again.</div>';
+      }
+    });
+  </script>
+  
+</body>
+</html>
+<form id="loginForm">
+    <div class="mb-3">
+      <label for="subscriberId" class="form-label">Subscriber ID</label>
+      <input type="text" class="form-control" id="subscriberId" required>
+    </div>
+    <div class="mb-3">
+      <label for="subscriberPassword" class="form-label">Password</label>
+      <input type="password" class="form-control" id="subscriberPassword" required>
+    </div>
+    <div id="loginMessage" class="mb-3 text-center"></div>
+    <button type="submit" class="btn btn-primary w-100">Login</button>
+  </form>
+  

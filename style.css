@@ -1,0 +1,128 @@
+/* General Reset & Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Headers */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Section Padding */
+.section {
+  padding: 60px 20px;
+}
+
+/* Cards / Boxes */
+.custom-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+/* Accordion (for Consumer/Subscriber Corner) */
+.accordion-button {
+  font-weight: 600;
+  background-color: #f1f1f1;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: #e2e6ea;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Service Images */
+.service-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.channel-thumb {
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  padding: 2px;
+  transition: transform 0.2s ease;
+}
+
+.channel-thumb:hover {
+  transform: scale(1.05);
+  border-color: #0d6efd;
+}
+.section-heading {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.btn-outline-primary {
+  border-radius: 25px;
+}
+#packages-section {
+  transition: all 0.3s ease-in-out;
+}
+.card {
+  border-radius: 12px;
+  padding: 20px;
+}
